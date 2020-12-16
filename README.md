@@ -4,7 +4,7 @@ It is a command line tool which takes 2 parameters. First Parameter is "Organiza
 
 
 For Eg :- 
-Command - ListRepoCLI twitter 10 ---> should give user statistics for Top 10 repositories based on below criteria :-
+Command - "ListRepoCLI twitter 10" ---> should give user statistics for Top 10 repositories based on below criteria :-
 1. No of Fork Counts
 2. No of Stars
 3. No of Pull Requests
