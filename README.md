@@ -1,6 +1,7 @@
 # ListRepoCLI
 These tool helps to Lists the number of repositories based on their popularity i.e No of stars/forks/PR
-It is a command line tool which takes 2 parameters. First Parameter is "Organization Name " and Second is "No of records" needed to display in o/p console window.
+It is a command line tool which takes 2 parameters. 
+First Parameter is "Organization Name " and Second is "No of records" needed to display in o/p console window.
 
 
 For Eg :- 
