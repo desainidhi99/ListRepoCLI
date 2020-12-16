@@ -26,7 +26,7 @@ def get_api(organizationName, noOfRecords):
             
         requestUrl = GIT_API_URL_Organization + organizationName + '/' + 'repos'
         jsonData = getResponse(requestUrl)
-        print(jsonData)
+ 
         
         results = []
         
