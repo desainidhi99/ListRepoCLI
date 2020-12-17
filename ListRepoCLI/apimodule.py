@@ -20,12 +20,13 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) '
         'Accept-Language': 'en-US,en;q=0.8',
         'Connection': 'keep-alive'}
 
-def get_api(organizationName, noOfRecords):
+def get_api(organizationName, noOfRecords,AccessToken):
     
     try:
             
         requestUrl = GIT_API_URL_Organization + organizationName + '/' + 'repos'
-        jsonData = getResponse(requestUrl)
+        jsonData = getResponse(requestUrl,AccessToken)
+
  
         
         results = []
@@ -38,7 +39,7 @@ def get_api(organizationName, noOfRecords):
             name_repository = item['name']
                                     
             requestevent = GIT_API_URL_Repos + full_name + '/pulls'           
-            jsonEventData = getResponse(requestevent)
+            jsonEventData = getResponse(requestevent,AccessToken)
             
             pr_count = 0
             contribution_Percentage = 0
@@ -77,7 +78,7 @@ def get_api(organizationName, noOfRecords):
         traceback.print_exc() 
         
     
-def getResponse(requestUrl) :
+def getResponse(requestUrl,AccessToken) :
       
         morePagesAvailable = True
         currentPage = 0
@@ -94,8 +95,7 @@ def getResponse(requestUrl) :
         '''
         while morePagesAvailable :
 
-            requestUrlforpage = (requestUrl+'?page{0}'.format(str(currentPage)))
-            response = requests.get(requestUrl+'?page{0}'.format(str(currentPage)), auth=(USER, {API_TOKEN}), headers = hdr)
+            response = requests.get(requestUrl+'?page{0}'.format(str(currentPage)), auth=(USER, {AccessToken}), headers = hdr)
             currentPage = currentPage+1
             result = response.json()
 
