@@ -8,7 +8,7 @@ from operator import itemgetter
 GIT_API_URL_Repos = "https://api.github.com/repos/"
 GIT_API_URL_Organization = 'https://api.github.com/orgs/'
 USER = 'desainidhi99'
-API_TOKEN = 'bbb8b1d43c6c3320762744217910809c550d9c79'
+
 
 
 hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) ' 
