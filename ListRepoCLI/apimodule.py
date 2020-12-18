@@ -87,7 +87,7 @@ def getResponse(requestUrl,AccessToken) :
         '''
         /*Request gives back only first 30 records , Uncomment these code (and comment out 'morepages' code) for fewer API requests*/
         
-        response = requests.get(requestUrl+'?page{0}'.format(str(currentPage)), auth=(USER, {API_TOKEN}), headers = hdr)
+        response = requests.get(requestUrl+'?page{0}'.format(str(currentPage)), auth=(USER, {AccessToken}), headers = hdr)
             
         result = response.json()
         data +=result
